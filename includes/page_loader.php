@@ -7,7 +7,7 @@ $page = $_GET['page'];
 $display = "";
   switch ($page) {
       case 'home':
-      # code...
+        $display = "pages/home.php";
       break;
 
       case 'contact':
@@ -15,11 +15,11 @@ $display = "";
       break;
 
       case 'solution':
-      # code...
+        $display = "pages/solution.php";
       break;
 
       case 'service':
-      # code...
+        $display = "pages/service.php";
       break;
 
       case 'company':
