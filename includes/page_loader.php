@@ -10,24 +10,24 @@ $display = "";
         $display = "pages/home.php";
       break;
 
-      case 'contact':
-        $display = "pages/contacts.php";
+      case 'services':
+        $display = "pages/services.php";
       break;
 
-      case 'solution':
-        $display = "pages/solution.php";
+      case 'obituaries':
+        $display = "pages/obituaries.php";
       break;
 
-      case 'service':
-        $display = "pages/service.php";
+      case 'about_us':
+        $display = "pages/about_us.php";
       break;
 
-      case 'company':
-        $display = "pages/content.php";
+      case 'register':
+        $display = "pages/register.php";
       break;
 
     default:
-      # code...
+        $display = "pages/home.php";
       break;
   }
 
