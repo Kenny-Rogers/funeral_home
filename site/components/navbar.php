@@ -11,10 +11,10 @@
     <nav>
       <ul id="menu">
         <li><a href="?page=home"><span>Home</span></a></li>
-        <li class="active"><a href="?page=company"><span>Company</span></a></li>
-        <li><a href="?page=solution"><span>Solutions</span></a></li>
-        <li><a href="?page=service"><span>Services</span></a></li>
-        <li class="last"><a href="?page=contact"><span>Contacts</span></a></li>
+        <li class="active"><a href="?page=services"><span>Services</span></a></li>
+        <li><a href="?page=obituaries"><span>Obituaries</span></a></li>
+        <li><a href="?page=about_us"><span>About Us</span></a></li>
+        <li class="last"><a href="?page=register"><span>Register</span></a></li>
       </ul>
     </nav>
   </header>
