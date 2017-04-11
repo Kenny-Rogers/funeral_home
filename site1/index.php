@@ -1,8 +1,7 @@
-<!-- head -->
-<?php include('component/header.php'); ?>
+<?php include("components/header.php"); ?>
 
-<!--header -->
-<?php include('component/navbar.php'); ?>
-<!--header end-->
+<?php include("components/nav_bar.php"); ?>
 
-<?php include('component/footer.php'); ?>
+<?php include("components/main_content.php"); ?>
+
+<?php include("components/footer.php");?>
