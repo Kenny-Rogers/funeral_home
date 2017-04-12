@@ -1,5 +1,6 @@
 <?php
 //include all the variables used in the site folder
+//initialized to a default value
 
 //LOCATION:: includes/public/page_loader.php
 //PURPOSE:: store the requested page
