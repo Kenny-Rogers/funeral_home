@@ -1,4 +1,4 @@
-<?php includes("../../includes/components/admin/initialize.php");?>
+<?php include("../../includes/admin/initialize.php");?>
 
 <?php include("components/head.php"); ?>
 
