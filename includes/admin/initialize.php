@@ -20,7 +20,7 @@ define('MENU_COMPONENT', SITE_ROOT.DS."public".DS."admin".DS."components".DS."me
 //ADMIN_PAGES::defines the path to the folder that contains the pages
 //of the Administrator
 defined('ADMIN_PAGES')?null:
-define('ADMIN_PAGES', SITE_ROOT.DS."admin".DS."components".DS."pages".DS."admin");
+define('ADMIN_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."admin");
 
 
 //load the config file first
