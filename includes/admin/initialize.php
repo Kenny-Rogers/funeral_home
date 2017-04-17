@@ -22,6 +22,17 @@ define('MENU_COMPONENT', SITE_ROOT.DS."public".DS."admin".DS."components".DS."me
 defined('ADMIN_PAGES')?null:
 define('ADMIN_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."admin");
 
+
+//ATTENDANT_PAGES::defines the path to the folder that contains the pages
+//of the Attendant
+defined('ATTENDANT_PAGES')?null:
+define('ATTENDANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."attendant");
+
+//ATTENDANT_PAGES::defines the path to the folder that contains the pages
+//of the Attendant
+defined('ACCOUNTANT_PAGES')?null:
+define('ACCOUNTANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."accountant");
+
 //ACTION_PAGES::defines the path to the folder that contains the pages
 //of the Administrator
 defined('ACTION_PAGES')?null:
