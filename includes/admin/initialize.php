@@ -22,6 +22,11 @@ define('MENU_COMPONENT', SITE_ROOT.DS."public".DS."admin".DS."components".DS."me
 defined('ADMIN_PAGES')?null:
 define('ADMIN_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."admin");
 
+//ACTION_PAGES::defines the path to the folder that contains the pages
+//of the Administrator
+defined('ACTION_PAGES')?null:
+define('ACTION_PAGES', LIB_PATH.DS."admin".DS."action");
+
 
 //load the config file first
 //require_once(LIB_PATH.DS."config.php");
