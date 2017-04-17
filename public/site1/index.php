@@ -1,4 +1,4 @@
-<?php include("../includes/public/page_loader.php"); ?>
+<?php include("../../includes/public/page_loader.php"); ?>
 
 <?php include("components/header.php"); ?>
 
