@@ -8,8 +8,6 @@
       include("{$menu}");
 ?>
 
-<?php //include("components/main_page.php");
-      include("{$display}");
-?>
+<?php include("components/main_page.php"); ?>
 
 <?php include("components/footer.php"); ?>
