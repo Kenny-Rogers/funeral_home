@@ -10,17 +10,17 @@ switch ($user) {
 
   case 'attendant':
     $page_loader = LIB_PATH.DS."loaders".DS."attendant_loader.php";
-    $menu = MENU_COMPONENT.DS."admin_menu.php";
+    $menu = MENU_COMPONENT.DS."attendant_menu.php";
     break;
 
   case 'accountant':
     $page_loader = LIB_PATH.DS."loaders".DS."accountant_loader.php";
-    $menu = MENU_COMPONENT.DS."admin_menu.php";
+    $menu = MENU_COMPONENT.DS."accountant_menu.php";
     break;
 
   default:
     $page_loader = LIB_PATH.DS."loaders".DS."attendant_loader.php";
-    $menu = MENU_COMPONENT.DS."admin_menu.php";
+    $menu = MENU_COMPONENT.DS."attendant_menu.php";
     break;
 }
 
