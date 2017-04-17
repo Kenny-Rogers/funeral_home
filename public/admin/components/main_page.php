@@ -13,8 +13,8 @@
 
   <!-- Main content -->
   <section class="content">
-
     <!-- Your Page Content Here -->
+      <?php include("{$display}"); ?>
 
   </section>
   <!-- /.content -->
