@@ -23,6 +23,12 @@ switch ($page) {
     $class_r = "active";
     break;
 
+
+  case 'release_info':
+    $display =  ADMIN_PAGES.DS."release_info.php";
+    $class_r = "active";
+    break;
+
   case 'notify':
     $display =  ADMIN_PAGES.DS."notify.php";
     $class_n = "active";
