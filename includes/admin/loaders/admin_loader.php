@@ -13,6 +13,11 @@ switch ($page) {
     $class_f = "active";
     break;
 
+  case 'display_info':
+    $display =  ADMIN_PAGES.DS."display_info.php";
+    $class_f = "active";
+    break;
+
   case 'release':
     $display =  ADMIN_PAGES.DS."release.php";
     $class_r = "active";
