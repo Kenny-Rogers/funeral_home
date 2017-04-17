@@ -45,6 +45,12 @@ switch ($page) {
     $class_rs = "active";
     break;
 
+  case 'delete_staff':
+    $display =  ADMIN_PAGES.DS."delete_staff.php";
+    $class_rs = "active";
+    break;
+
+
   default:
     $display =  ADMIN_PAGES.DS."add_body.php";
     $class_ac = "active";
