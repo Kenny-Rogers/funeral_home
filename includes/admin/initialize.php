@@ -38,25 +38,28 @@ define('ACCOUNTANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."
 defined('ACTION_PAGES')?null:
 define('ACTION_PAGES', LIB_PATH.DS."admin".DS."action");
 
+defined('WEBSITE_PAGES')?null:
+define('WEBSITE_PAGES', SITE_ROOT.DS."public".DS."site1".DS."pages");
+
 
 //load the config file first
-//require_once(LIB_PATH.DS."config.php");
+require_once(LIB_PATH.DS."config.php");
 
 //load basic functions next so that the rest of the loaded files can
 //uses these two (config.php and functions.php)
-//require_once(LIB_PATH.DS.'functions.php');
+require_once(LIB_PATH.DS.'functions.php');
 require_once(LIB_PATH.DS.'admin'.DS.'init_vars.php');
 require_once(LIB_PATH.DS.'admin'.DS.'user_loader.php');
 
 //load core objects
-// require_once(LIB_PATH.DS.'session.php');
-// require_once(LIB_PATH.DS.'database.php');
-// require_once(LIB_PATH.DS.'database_object.php');
-// require_once(LIB_PATH.DS.'log.php');
+require_once(LIB_PATH.DS.'session.php');
+require_once(LIB_PATH.DS.'database.php');
+require_once(LIB_PATH.DS.'database_object.php');
+require_once(LIB_PATH.DS.'log.php');
 // require_once(LIB_PATH.DS.'pagination.php');
 
 //load database-related classes
-// require_once(LIB_PATH.DS.'user.php');
+require_once(LIB_PATH.DS.'admin.php');
 // require_once(LIB_PATH.DS.'photograph.php');
 
 ?>
