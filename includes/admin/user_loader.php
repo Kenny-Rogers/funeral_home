@@ -1,8 +1,9 @@
 <?php
 //loads all the content specific to a user{Administrator, Attendant, Accountant}
-$user = "accountant";
+$role = $worker->role();
 
-switch ($user) {
+
+switch ($role) {
   case 'admin':
     $page_loader = LIB_PATH.DS."admin".DS."loaders".DS."admin_loader.php";
     $menu = MENU_COMPONENT.DS."admin_menu.php";
