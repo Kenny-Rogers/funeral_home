@@ -16,10 +16,10 @@
     $deadbody->set_status("admitted");
 
     if ($deadbody && $deadbody->save()){
-        $worker_id = $session->worker_id;
-        $worker = Worker::find_by_id($worker_id);
+        $worker = Worker::find_by_id($session->worker_id);
         $worker_name = $worker->full_name();
-        Log::log_action("Registration", "{$full_name} registered Deadbody ".$deadbody->get_full_name());
+        $deadbody_name = $deadbody->get_full_name();
+        Log::log_action("Registration", "{$worker_name} registered Deadbody {$deadbody_name}");
         redirect_to("../../../public/admin/index.php?page=add_corpse&stat=1");
     }else{
         redirect_to("../../../public/admin/index.php?page=add_corpse&stat=2");
