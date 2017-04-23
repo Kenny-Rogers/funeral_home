@@ -53,7 +53,7 @@ class Deadbody extends DatabaseObject {
   }
 
   public function get_full_name(){
-    return $full_name;
+    return $this->full_name;
   }
 
   public function get_address(){
