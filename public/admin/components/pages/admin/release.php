@@ -1,3 +1,6 @@
+<?php
+  $deadbodies = Deadbody::find_all(" WHERE NOT status='released'");
+?>
 <div class="row">
         <div class="col-xs-12">
           <div class="box box-primary">
@@ -17,20 +20,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td>-</td>
-                  <td><a href="?page=release_info&body_id=4">Release</a></td>
-                </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+                  <?php foreach ($deadbodies as $deadbody): ?>
+                    <tr>
+                    <td><?php echo $deadbody->id; ?></td>
+                    <td><?php echo $deadbody->get_full_name(); ?></td>
+                    <td><?php echo $deadbody->get_date_of_death(); ?></td>
+                    <td>-</td>
+                    <td><a href="?page=release_info&body_id=<?php echo $deadbody->id; ?>">Release</a></td>
+                  </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
