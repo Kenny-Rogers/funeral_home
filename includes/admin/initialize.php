@@ -49,7 +49,7 @@ require_once(LIB_PATH.DS."config.php");
 //uses these two (config.php and functions.php)
 require_once(LIB_PATH.DS.'functions.php');
 require_once(LIB_PATH.DS.'admin'.DS.'init_vars.php');
-require_once(LIB_PATH.DS.'admin'.DS.'user_loader.php');
+// require_once(LIB_PATH.DS.'admin'.DS.'user_loader.php');
 
 //load core objects
 require_once(LIB_PATH.DS.'session.php');
