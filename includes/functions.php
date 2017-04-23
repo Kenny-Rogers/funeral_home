@@ -23,6 +23,9 @@ function output_message($message="", $class=""){
   } elseif(!empty($message)&& $class="fail"){
       echo "<div class='col-sm-offset-2 col-sm-6 alert alert-danger'>
               {$message}</div>";
+  }elseif(!empty($message)&& $class="info"){
+      echo "<div class='col-sm-offset-2 col-sm-6 alert alert-info'>
+              {$message}</div>";
   } else {
     echo "";
   }
@@ -44,10 +47,16 @@ function __autoload($class_name){
     include(SITE_ROOT.DS.'public'.DS.'layouts'.DS.$template);
   }
 
-function datetime_to_text($datetime=""){
-  //displays the date in a different format
-  $unixdatetime=strtotime($datatime);
-  return Strftime("%B %d, %Y at %I:%M %p", $unixdatetime);
-}
+  function datetime_to_text($datetime=""){
+    //displays the date in a different format
+    $unixdatetime=strtotime($datatime);
+    return Strftime("%B %d, %Y at %I:%M %p", $unixdatetime);
+  }
+
+  function format_date($dt){
+  	//$dt=time();
+  	$mysql_date=strftime("%Y-%m-%d", $dt);
+  	return  $mysql_date;
+  }
 
 ?>
