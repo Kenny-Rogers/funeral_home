@@ -56,10 +56,16 @@ require_once(LIB_PATH.DS.'session.php');
 require_once(LIB_PATH.DS.'database.php');
 require_once(LIB_PATH.DS.'database_object.php');
 require_once(LIB_PATH.DS.'log.php');
-// require_once(LIB_PATH.DS.'pagination.php');
 
 //load database-related classes
-require_once(LIB_PATH.DS.'admin.php');
-// require_once(LIB_PATH.DS.'photograph.php');
+require_once(LIB_PATH.DS.'models'.DS.'worker.php');
+require_once(LIB_PATH.DS.'models'.DS.'compartment.php');
+require_once(LIB_PATH.DS.'models'.DS.'deadbody.php');
+require_once(LIB_PATH.DS.'models'.DS.'payment.php');
+require_once(LIB_PATH.DS.'models'.DS.'relative.php');
+require_once(LIB_PATH.DS.'models'.DS.'requested_service.php');
+require_once(LIB_PATH.DS.'models'.DS.'service.php');
+require_once(LIB_PATH.DS.'models'.DS.'storage.php');
+
 
 ?>
