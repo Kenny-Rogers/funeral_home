@@ -19,9 +19,69 @@ class Deadbody extends DatabaseObject {
   protected $status;
 
 
-  public function full_name(){
+
+  public function set_full_name($full_name=""){
+    $this->full_name = $full_name;
+  }
+
+  public function set_address($txt=""){
+    $this->address = $txt;
+  }
+
+  public function set_gender($txt=""){
+    $this->gender = $txt;
+  }
+
+  public function set_date_of_birth($txt=""){
+    $this->date_of_birth = $txt;
+  }
+
+  public function set_date_of_death($txt=""){
+    $this->date_of_death = $txt;
+  }
+
+  public function set_religion($txt=""){
+    $this->religion = $txt;
+  }
+
+  public function set_cause_of_death($txt=""){
+    $this->cause_of_death = $txt;
+  }
+
+  public function set_status($txt=""){
+    $this->status = $txt;
+  }
+
+  public function get_full_name(){
     return $full_name;
   }
 
+  public function get_address(){
+    return $this->address;
+  }
+
+  public function get_gender(){
+    return $this->gender;
+  }
+
+  public function get_date_of_birth(){
+    return $this->date_of_birth;
+  }
+
+  public function get_date_of_death(){
+    return $this->date_of_death;
+  }
+
+  public function get_religion(){
+    return $this->religion;
+  }
+
+  public function get_cause_of_death(){
+    return $this->cause_of_death;
+  }
+
+  public function get_status(){
+    return $this->status;
+  }
 }
 ?>
