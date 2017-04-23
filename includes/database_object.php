@@ -41,12 +41,7 @@ class DatabaseObject{
     }
     $sql="UPDATE ".static::$table_name." SET ";
     $sql.=join(", ",$attribute_pairs);
-    // $sql.="username='".$database->escape_value($this->username)."' ,";
-    // $sql.="password='".$database->escape_value($this->password)."' ,";
-    // $sql.="first_name='".$database->escape_value($this->first_name)."' ,";
-    // $sql.="last_name='".$database->escape_value($this->last_name)."' ";
     $sql.=" WHERE id=".$database->escape_value($this->id);
-    echo $sql;
     $database->query($sql);
     return($database->affected_rows()==1)? true : false;
   }
@@ -68,9 +63,9 @@ class DatabaseObject{
     return($database->affected_rows()==1)? true : false;
   }
 
-  public static function find_all(){
+  public static function find_all($with_details=""){
     //returns all records stored in the table specified in the child class
-    return self::find_by_sql("SELECT * FROM ".static::$table_name);
+    return self::find_by_sql("SELECT * FROM ".static::$table_name."{$with_details}");
   }
 
   public static function find_by_id($id=0){
