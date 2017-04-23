@@ -7,8 +7,7 @@ class Deadbody extends DatabaseObject {
   //get a list of attributes to be used
   protected static $table_name="deadbody";
   protected static $db_fields=array('id', 'address', 'date_of_birth', 'religion',
-    'full_name', 'gender', 'role', 'telephone', 'date_of_death', 'cause_of_death',
-  'status');
+    'full_name', 'gender', 'date_of_death', 'cause_of_death', 'status');
   public $id;
   protected $full_name;
   protected $address;
