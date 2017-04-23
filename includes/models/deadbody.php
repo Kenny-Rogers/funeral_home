@@ -1,7 +1,7 @@
 <?php
 require_once(LIB_PATH.DS.'database.php');
 
-class Worker extends DatabaseObject {
+class Deadbody extends DatabaseObject {
   //this class interacts with the worker table in the database
   //NOTE::for very large tables, you can use mysqli's show_fields_from(TABLE_NAME)
   //get a list of attributes to be used
