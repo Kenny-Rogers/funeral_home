@@ -22,7 +22,7 @@ switch ($page) {
     break;
 
   case 'about_us':
-    $display = "";
+    $display = WEBSITE_PAGES.DS."about_us.php";
     $class_a = "active";
     break;
 
