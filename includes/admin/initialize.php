@@ -57,6 +57,7 @@ require_once(LIB_PATH.DS.'database_object.php');
 require_once(LIB_PATH.DS.'log.php');
 
 //load database-related classes
+require_once(LIB_PATH.DS.'models'.DS.'message.php');
 require_once(LIB_PATH.DS.'models'.DS.'worker.php');
 require_once(LIB_PATH.DS.'models'.DS.'compartment.php');
 require_once(LIB_PATH.DS.'models'.DS.'deadbody.php');
