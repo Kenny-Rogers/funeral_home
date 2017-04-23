@@ -5,7 +5,7 @@ class Worker extends DatabaseObject {
   //this class interacts with the worker table in the database
   //NOTE::for very large tables, you can use mysqli's show_fields_from(TABLE_NAME)
   //get a list of attributes to be used
-  protected static $table_name="worker";
+  protected static $table_name="deadbody";
   protected static $db_fields=array('id', 'address', 'date_of_birth', 'religion',
     'full_name', 'gender', 'role', 'telephone', 'date_of_death', 'cause_of_death',
   'status');
