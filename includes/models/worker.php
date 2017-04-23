@@ -21,7 +21,7 @@ class Worker extends DatabaseObject {
     global $database;
     $email=$database->escape_value($email);
     $password=$database->escape_value($password);
-    $sql="SELECT * FROM {$table_name} WHERE email='{$email}'
+    $sql="SELECT * FROM worker WHERE email='{$email}'
           AND password='{$password}' LIMIT 1";
     $result_array=self::find_by_sql($sql);
     //returns the first element in the array
@@ -29,7 +29,11 @@ class Worker extends DatabaseObject {
   }
 
   public function full_name(){
-    return $full_name;
+    return $this->full_name;
+  }
+
+  public function role(){
+    return $this->role;
   }
 
 }
