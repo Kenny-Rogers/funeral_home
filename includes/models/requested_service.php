@@ -8,7 +8,6 @@ class RequestedService extends DatabaseObject {
   protected static $table_name="requested_service";
   protected static $db_fields=array('rel_no', 'dead_no',
     'service_no', 'worker_no');
-  public $id;
   protected $rel_no;
   protected $dead_no;
   protected $service_no;
