@@ -1,3 +1,4 @@
+<?php $staff = Worker::find_all(" WHERE status='active'");?>
 <div class="row">
         <div class="col-xs-12">
           <div class="box box-primary">
@@ -16,18 +17,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                  <?php foreach ($staff as $current_worker) { ?>
                   <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td><a href="?page=delete_staff&worker_id=4">Remove</a></td>
+                  <td><?php echo $current_worker->id; ?></td>
+                  <td><?php echo $current_worker->get_full_name(); ?></td>
+                  <td><?php echo $current_worker->get_role(); ?></td>
+                  <td><a href="?page=delete_staff&worker_id=<?php echo $current_worker->id; ?>">Remove</a></td>
                 </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+                <?php } ?>
                 </tbody>
               </table>
             </div>
