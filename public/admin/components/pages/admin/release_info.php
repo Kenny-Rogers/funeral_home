@@ -5,7 +5,7 @@
 
   if ($deadbody && $deadbody->save()){
       $worker = Worker::find_by_id($session->worker_id);
-      $worker_name = $worker->full_name();
+      $worker_name = $worker->get_full_name();
       $deadbody_name = $deadbody->get_full_name();
       Log::log_action("Released", "{$worker_name} released Deadbody {$deadbody_name}");
       $message = "Deadbody released successfull";
