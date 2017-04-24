@@ -8,8 +8,8 @@
 
   if($worker){
     //if user exit login user and redirect to index.php
-    $full_name = $worker->full_name();
-    
+    $full_name = $worker->get_full_name();
+
     $session->login($worker);
     //logging the user login action
     Log::log_action("Login", "{$full_name} logged in");
@@ -17,5 +17,7 @@
   }else{
     //else display error message
     $message="Username/password combination incorrect";
+    Log::log_action("Login", "Login Failed");
+    redirect_to("../../../public/admin/login.php");
   }
 ?>
