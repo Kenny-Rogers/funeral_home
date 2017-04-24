@@ -1,9 +1,9 @@
 <?php
+include('../initialize.php');
 $page="display_info";
-$q=mysqli_real_escape_string($connection,$_GET['q']);
-//$sql="SELECT Pid, FullName FROM patientbios NOT IN (SELECT Pid FROM $tbl)";
-$sql="";
-$res=mysqli_query($connection, $sql);
+$q=$_GET['q'];
+$sql="SELECT id, full_name FROM deadbody ";
+$res=$database->query($sql);
 
 //arrays to hold names and ids
 $names=array();
@@ -11,8 +11,8 @@ $id=array();
 
 //fetching all the names and ids into arrays
 while($row=mysqli_fetch_assoc($res)){
-array_push($id, $row['Pid']);
-array_push($names,strtoupper($row['FullName']));
+array_push($id, $row['id']);
+array_push($names,strtoupper($row['full_name']));
 
 }
 
@@ -33,7 +33,7 @@ if($nLen==$iLen){
       $count++;
     }
   }
-
+}
 
 function findMatch($q, $body_id, $name){
 		global $page;
@@ -43,7 +43,7 @@ function findMatch($q, $body_id, $name){
       $n = strtoupper($q);
           //checking if the query is a substring of a specific name
           if(stristr($name, $n)){
-            return "<a href='?page={$page}&q={$body_id}' class='list-group-item'>$name</a>" ;
+            return "<a href='?page={$page}&body_id={$body_id}' class='list-group-item'>$name</a>" ;
             //echo $sql;
           }else{
               return "no suggestions found";
