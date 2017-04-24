@@ -1,4 +1,4 @@
-<?php $full_name = $worker->full_name(); ?>
+<?php $full_name = $worker->get_full_name(); ?>
 <header class="main-header">
   <!-- Logo -->
   <a href="index2.html" class="logo">
