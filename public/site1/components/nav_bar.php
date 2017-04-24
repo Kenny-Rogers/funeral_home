@@ -6,7 +6,7 @@
                 <div class="span12">
 
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Your Name Here</a><br />
+                        <a href="index.html" id="divSiteTitle">CrossOver</a><br />
                         <a href="index.html" id="divTagLine">Your Tag Line Here</a>
                     </div>
 
