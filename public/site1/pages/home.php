@@ -8,9 +8,9 @@
                         <div id="headerSeparator"></div>
 
                         <div id="divHeaderText" class="page-content">
-                            <div id="divHeaderLine1">Your Header Text Here!</div><br />
-                            <div id="divHeaderLine2">2nd line header text for calling extra attention to featured content..</div><br />
-                            <div id="divHeaderLine3"><a class="btn btn-large btn-primary" href="#">Read More</a></div>
+                          <div id="divHeaderLine1">CrossOver mortuary and funeral home</div><br />
+                          <div id="divHeaderLine2">2nd line header text for calling extra attention to featured content..</div><br />
+
                         </div>
 
                         <div id="headerSeparator2"></div>
@@ -33,13 +33,15 @@
 
                 <div class="span12" id="divMain">
 
-                    <h1>Welcome</h1>
 
-                    <p>Content on this page is for presentation purposes only. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                  <font color ="violet" size ="8"> Welcome</font><br></br>
 
+                  <font face ="Agency FB" size ="5">Reputation matters! The death of a loved one is a difficult time in your life and it is wise
+                                                    to make choices based on the quality of care and the reputation of the firm that is serving you.
+                                                    With over a decade of providing quality funeral services to the Legon area, you can be assured that our staff is
+                                                    dedicated to providing the best possible service to each family.
+
+                </font>
                     <hr style="margin:45px 0 35px" />
 
                     <div class="lead">
