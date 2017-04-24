@@ -15,9 +15,9 @@
     $deadbody->set_cause_of_death($_POST["cause_of_death"]);
     $deadbody->set_status("admitted");
 
-    if ($deadbody && $deadbody->save()){
+    if ($deadbody && $deadbody->record()){
         $worker = Worker::find_by_id($session->worker_id);
-        $worker_name = $worker->full_name();
+        $worker_name = $worker->get_full_name();
         $deadbody_name = $deadbody->get_full_name();
         Log::log_action("Registration", "{$worker_name} registered Deadbody {$deadbody_name}");
         redirect_to("../../../public/admin/index.php?page=add_corpse&stat=1");
