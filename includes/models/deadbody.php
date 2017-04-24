@@ -17,7 +17,9 @@ class Deadbody extends DatabaseObject {
   protected $religion;
   protected $cause_of_death;
   protected $status;
-
+  protected $relative;
+  protected $storage;
+  protected $requested_services = array();
 
 
   public function set_full_name($full_name=""){
@@ -82,6 +84,26 @@ class Deadbody extends DatabaseObject {
 
   public function get_status(){
     return $this->status;
+  }
+
+  public function record(){
+    $this->create();
+    $this->storage = new Storage();
+    $this->storage->find_next_compartment();
+    $this->storage->set_dead_no($this->id);
+    $this->storage->set_status("occupied");
+
+    $service = new RequestedService();
+    $service->rel_no = 'null';
+    $service->service_no = 1;
+    $service->dead_no = $this->id;
+    $this->requested_service[] = $service;
+
+    if($this->storage->save() && $service->save()){
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 ?>
