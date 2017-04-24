@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome-ie7.min.css">
     <![endif]-->
 
-
+<link href="scripts/carousel/style.css" rel="stylesheet" type="text/css" />
 
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
