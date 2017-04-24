@@ -41,7 +41,7 @@
 
   if (Message::send_message( $number, $message)){
       $worker = Worker::find_by_id($session->worker_id);
-      $worker_name = $worker->full_name();
+      $worker_name = $worker->get_full_name();
       $deadbody_name = $deadbody->get_full_name();
       Log::log_action("Notification", "{$worker_name} notified  relative of {$deadbody_name}");
       redirect_to("../../../public/admin/index.php?page=notify&stat=1");
