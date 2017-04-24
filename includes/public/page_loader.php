@@ -7,12 +7,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 switch ($page) {
   case 'home':
-    $display = "";
+    $display = WEBSITE_PAGES.DS."home.php";
     $class_h = "active";
     break;
 
   case 'services':
-    $display = "";
+    $display = WEBSITE_PAGES.DS."service.php";
     $class_s = "active";
     break;
 
@@ -30,6 +30,7 @@ switch ($page) {
     $display = "";
     $class_l = "active";
     break;
+
   default:
     $display = "";
     $class_h = "active";
