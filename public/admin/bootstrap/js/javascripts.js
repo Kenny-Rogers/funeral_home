@@ -32,6 +32,6 @@ function showHint(str) {
           			document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
         		}
           }
-           xmlhttp.open("GET", "../../includes/actions/gethint.php?q="+str, true);
+           xmlhttp.open("GET", "../../includes/admin/action/get_hint.php?q="+str, true);
            xmlhttp.send();
     }
