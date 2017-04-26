@@ -1,3 +1,31 @@
+<?php
+ $status = isset($_GET['stat'])?$_GET['stat']:0;
+
+ switch ($status) {
+   case 1:
+     $message = "Payment successfull";
+     $class = "success";
+     break;
+
+   case 2:
+     $message = "Payment failed";
+     $class = "fail";
+     break;
+
+   default:
+     $message = "Please Complete Form";
+     $class = "info";
+     break;
+ }
+?>
+<?php
+  $deadbodies = Deadbody::find_all(" WHERE NOT status='released'");
+?>
+<div class="row">
+  <div class="col-md-offset-2 col-md-10">
+    <?php output_message($message, $class)?>
+  </div>
+</div>
 <div class="row">
         <div class="col-xs-12">
           <div class="box box-primary">
@@ -12,25 +40,20 @@
                   <th>Body Number</th>
                   <th>Name</th>
                   <th>Date of Death</th>
-                  <th>Compartment Number</th>
+                  <!--th>Compartment Number</th-->
                   <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td>-</td>
-                  <td><a href="?page=record_payment&body_id=4">Record Payment</a></td>
-                </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+                  <?php foreach ($deadbodies as $deadbody){ ?>
+                    <tr>
+                    <td><?php echo $deadbody->id; ?></td>
+                    <td><?php echo $deadbody->get_full_name(); ?></td>
+                    <td><?php echo $deadbody->get_date_of_death(); ?></td>
+                    <!--td>-</td-->
+                    <td><a href="?page=record_payment&body_id=4">Record Payment</a></td>
+                    </tr>
+                <?php } ?>
                 </tbody>
               </table>
             </div>
