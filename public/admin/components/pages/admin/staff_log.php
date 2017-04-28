@@ -3,16 +3,17 @@
  if(isset($_GET['clear'])){
    $message="The log file was cleared";
    Log::clear_log($message);
-   
+
  }
  //reading the logs
  $log_details=Log::display_log();
 ?>
-<h2>LOGS</h2>
 <form action="index.php" method="get">
   <input type="text" name="page" value="staff_log" hidden>
   <input type="text" name="clear" value="true" hidden>
-  <input type="submit" name="submit" value="Clear logs">
+  <div class="row">
+    <input type="submit" class="col-sm-4 col-sm-offset-7 btn btn-primary col-sm-4" name="submit" value="Clear logs">
+  </div>
 </form>
 <?php
 echo nl2br($log_details);
