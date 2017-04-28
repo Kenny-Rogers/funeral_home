@@ -1,5 +1,7 @@
 <?php
+//contains methods for logging users activities
 class Log{
+  //logs actions
   static function log_action($action, $message=""){
     //log file location
     $logfile=SITE_ROOT.DS."logs".DS."logs.txt";
@@ -15,6 +17,7 @@ class Log{
     fclose($file_handler);
   }
 
+  //clear all recorded logs
   static function clear_log($message=""){
     //log file location
     $logfile=SITE_ROOT.DS."logs".DS."logs.txt";
@@ -26,6 +29,7 @@ class Log{
     fclose($file_handler);
   }
 
+  //record_log stores log info in the log file
    static function record_log($action, $handler, $message){
      //date formatting
     $date=strftime('%Y-%m-%d %H:%M:%S', time());
@@ -40,6 +44,7 @@ class Log{
     }
   }
 
+  //displays the logs in the log file 
   static function display_log(){
     //log file
     $logfile=SITE_ROOT.DS."logs".DS."logs.txt";
