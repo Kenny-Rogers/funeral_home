@@ -125,5 +125,9 @@ class Deadbody extends DatabaseObject {
       return false;
     }
   }
+
+  public function get_relative(){
+    return $this->relative->full_name();
+  }
 }
 ?>
