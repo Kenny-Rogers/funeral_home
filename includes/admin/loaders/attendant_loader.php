@@ -4,7 +4,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'current_service';
 
 switch ($page) {
   case 'current_service':
-    $display =  ATTENDANT_PAGES.DS."current_services.php";
+    $display =  ATTENDANT_PAGES.DS."release.php";
     $class_ac = "active";
     break;
 
