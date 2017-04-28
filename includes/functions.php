@@ -1,4 +1,5 @@
 <?php
+//contains utility functions
 function strip_zeros_from_date($date=""){
   //removes marked zeros
   $no_zeros=str_replace('*0', '', $date);
@@ -7,6 +8,7 @@ function strip_zeros_from_date($date=""){
   return $cleaned_string;
 }
 
+//redirects to a different html page
 function redirect_to($location=NULL){
   //redirects to a given page
   if($location!=NULL){
@@ -15,6 +17,8 @@ function redirect_to($location=NULL){
   }
 }
 
+
+//displays a style alert message
 function output_message($message="", $class=""){
   //displays a paragraphed text
   if(!empty($message)&& $class="success"){
@@ -53,6 +57,7 @@ function __autoload($class_name){
     return Strftime("%B %d, %Y at %I:%M %p", $unixdatetime);
   }
 
+  //makes a date acceptable to mysql database
   function format_date($dt){
   	//$dt=time();
   	$mysql_date=strftime("%Y-%m-%d", $dt);
