@@ -19,6 +19,7 @@ class Deadbody extends DatabaseObject {
   protected $days_spent;
   public $relative;
   public $requested_services = array();
+  public $payments = array();
   public $compartment;
 
   //setters and getters for protected fields
@@ -106,12 +107,6 @@ class Deadbody extends DatabaseObject {
     //store deadbody object first
     $this->create();
 
-    //creates storage information for the deadbody
-    // $this->storage = new Storage();
-    // $this->storage->find_next_compartment();
-    // $this->storage->set_dead_no($this->id);
-    // $this->storage->set_status("occupied");
-
     //stores new deadbody in compartment
     $sql = "SELECT * FROM compartment WHERE status='free' LIMIT 1";
     $this->compartment = array_shift(Compartment::find_by_sql($sql));
@@ -136,5 +131,63 @@ class Deadbody extends DatabaseObject {
   public function get_relative(){
     return $this->relative->full_name();
   }
+
+  public function get_services_cost(){
+    //gets all the cost of requested services on the deadbody
+    //find all the requested services on a deadbody
+    $sql = "SELECT * FROM requested_service WHERE dead_no={$this->id}";
+    $this->requested_services = RequestedService::find_by_sql($sql);
+    $total_debit = 0;
+    //for each requested service find price and add to total debit
+    foreach ($this->requested_services as $requested_service) {
+      $service = Service::find_by_id($requested_service->service_no);
+      $total_debit += $service->price;
+    }
+    return $total_debit;
+  }
+
+  public function get_storage_cost(){
+    //gets the cost of storage from the day the bosy was registered
+    $number_of_days = $this->get_days_spent();
+    $total_debit = 0;
+
+    //cost for first week
+    if ($number_of_days <= 7) {
+      $total_debit += $number_of_days * 10.0;
+    } else {
+      $number_of_days = $number_of_days - 7;
+      $total_debit += 7 * 10.0;
+
+      //cost for second week
+      if ($number_of_days <= 7) {
+        $total_debit += $number_of_days * 20.0;
+      }else {
+        $number_of_days = $number_of_days - 7;
+        $total_debit += 7 * 20.0;
+
+        //for third week onwards
+        $total_debit += $number_of_days * 30.0;
+      }
+    }
+    return $total_debit;
+  }
+
+  public function get_total_debit(){
+    //gets all the cost on the body
+    return $this->get_storage_cost() + $this->get_services_cost();
+  }
+
+  public function get_total_credit(){
+    //finds all the payments made on a body
+    $sql = "SELECT * FROM payment WHERE paid_for={$this->id}";
+    $payments = Payment::find_by_sql($sql);
+    $total_credits = 0;
+    foreach ($payments as $payment) {
+      $total_credits += $payment->amount;
+    }
+
+    return $total_credits;
+  }
+
 }
 ?>
