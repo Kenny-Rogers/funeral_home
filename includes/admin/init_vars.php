@@ -12,4 +12,5 @@ $class_r = "";
 $class_n = "";
 $class_as = "";
 $class_rs = "";
+$class_sl = "";
 ?>
