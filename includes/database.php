@@ -1,4 +1,6 @@
 <?php
+//contains class to connect to database
+
 require_once(LIB_PATH.DS.'config.php');
 class MySQLDatabase{
   //db connection
@@ -36,7 +38,7 @@ class MySQLDatabase{
   }
 
   public function query($sql){
-    //executes query
+    //executes  a query
     $this->last_query=$sql;
     $result=mysqli_query($this->connection, $sql);
     $this->confirm_query($result);
