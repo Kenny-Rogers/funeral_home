@@ -1,5 +1,5 @@
 <?php require_once (LIB_PATH.DS.'database.php');
-//includes all common methods called on all database objects returned on a query
+//includes all common methods called on all objects that extends DatabaseObject returned on a query
 // 'static::[attribute or method]' is used to access the info of the calling object
 // that is static but not this object's info
 
@@ -17,11 +17,6 @@ class DatabaseObject{
     $sql.=") VALUES( '";
     $sql.=join("', '", array_values($attributes));
     $sql.=" ')";
-    //username, password, first_name, last_name)";
-    // $sql.=$database->escape_value($this->username)."','";
-    // $sql.=$database->escape_value($this->password)."','";
-    // $sql.=$database->escape_value($this->first_name)."','";
-    // $sql.=$database->escape_value($this->last_name)."')";
     if($database->query($sql)){
       $this->id=$database->insert_id();
       return true;
@@ -135,6 +130,8 @@ class DatabaseObject{
   }
 
   protected function sanitized_attributes(){
+    //checks if values to be inserted into the db
+    //do not contin any restricted character {-,/}
     global $database;
     $clean_attributes=array();
     foreach($this->attributes() as $key=>$value){
