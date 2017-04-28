@@ -21,13 +21,13 @@ function redirect_to($location=NULL){
 //displays a style alert message
 function output_message($message="", $class=""){
   //displays a paragraphed text
-  if(!empty($message)&& $class="success"){
+  if(!empty($message)&& $class == "success"){
     echo "<div class='col-sm-offset-2 col-sm-6 alert alert-success'>
             {$message}</div>";
-  } elseif(!empty($message)&& $class="fail"){
+  } elseif(!empty($message)&& $class == "fail"){
       echo "<div class='col-sm-offset-2 col-sm-6 alert alert-danger'>
               {$message}</div>";
-  }elseif(!empty($message)&& $class="info"){
+  }elseif(!empty($message)&& $class == "info"){
       echo "<div class='col-sm-offset-2 col-sm-6 alert alert-info'>
               {$message}</div>";
   } else {
