@@ -50,6 +50,11 @@ switch ($page) {
     $class_rs = "active";
     break;
 
+  case 'staff_log':
+    $display =  ADMIN_PAGES.DS."staff_log.php";
+    $class_sl = "active";
+    break;
+
 
   default:
     $display =  ADMIN_PAGES.DS."add_body.php";
