@@ -6,7 +6,7 @@ class Deadbody extends DatabaseObject {
 
   protected static $table_name="deadbody";
   protected static $db_fields=array('id', 'address', 'date_of_birth', 'religion',
-    'full_name', 'gender', 'date_of_death', 'cause_of_death', 'status');
+    'full_name', 'gender', 'date_of_death', 'cause_of_death', 'status', 'days_spent');
   public $id;
   protected $full_name;
   protected $address;
@@ -16,6 +16,7 @@ class Deadbody extends DatabaseObject {
   protected $religion;
   protected $cause_of_death;
   protected $status;
+  protected $days_spent;
   public $relative;
   public $requested_services = array();
   public $compartment;
@@ -59,6 +60,9 @@ class Deadbody extends DatabaseObject {
       $this->compartment->status = "free";
       //storing the information
       $this->compartment->save();
+    } elseif ($txt == "admitted") {
+      //admitting a body
+      $this->status = $txt;
     }
   }
 
@@ -94,6 +98,9 @@ class Deadbody extends DatabaseObject {
     return $this->status;
   }
 
+  public function get_days_spent(){
+    return abs($this->days_spent);
+  }
   //custom method for storing object's info in db
   public function record(){
     //store deadbody object first
