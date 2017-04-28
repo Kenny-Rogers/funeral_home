@@ -11,7 +11,8 @@
 
                     <h3>About Company</h3>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
 
                     <p>
                         <a href="#" title="Terms of Use">Terms of Use</a><br />
@@ -23,7 +24,7 @@
                 </div>
                 <div class="span3" id="footerArea2">
 
-                    <h3>Recent Blog Posts</h3>
+                    <!--h3>Recent Blog Posts</h3>
                     <p>
                         <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
                         <span style="text-transform:none;">2 hours ago</span>
@@ -38,7 +39,7 @@
                     </p>
                     <p>
                         <a href="#" title="">VIEW ALL POSTS</a>
-                    </p>
+                    </p-->
 
                 </div>
                 <div class="span3" id="footerArea3">
@@ -58,21 +59,21 @@
                         <i class="general foundicon-phone icon"></i>
                         <span class="field">Phone:</span>
                         <br />
-                        (123) 456 7890 / 456 7891
+                        (233) 456 7890 / 456 7891
                     </li>
                     <li>
                         <i class="general foundicon-mail icon"></i>
                         <span class="field">Email:</span>
                         <br />
-                        <a href="mailto:info@yourdomain.com" title="Email">info@yourdomain.com</a>
+                        <a href="mailto:info@yourdomain.com" title="Email">crossover@gmail.com</a>
                     </li>
                     <li>
                         <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
                         <span class="field">Address:</span>
                         <br />
-                        123 Street<br />
-                        12345 City, State<br />
-                        Country
+                        Legon street <br />
+                        Legon, Accra<br />
+                        Ghana
                     </li>
                     </ul>
 
@@ -83,7 +84,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <p class="copyright">
-                        Copyright © 2013 Your Company. All Rights Reserved.
+                        Copyright © 2017 CrossOver. All Rights Reserved.
                     </p>
 
                     <p class="social_bookmarks">
