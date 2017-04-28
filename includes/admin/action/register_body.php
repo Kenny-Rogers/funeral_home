@@ -25,7 +25,8 @@
         $deadbody_name = $deadbody->get_full_name();
         Log::log_action("Registration", "{$worker_name} registered Deadbody {$deadbody_name}");
         //redirect to  next page
-        redirect_to("../../../public/admin/index.php?page=add_corpse&stat=1");
+        $body_id = $deadbody->id;
+        redirect_to("../../../public/admin/index.php?page=display_info&body_id={$body_id}&stat=1");
     }else{
         redirect_to("../../../public/admin/index.php?page=add_corpse&stat=2");
     }
