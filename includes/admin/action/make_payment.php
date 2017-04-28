@@ -2,6 +2,7 @@
 require_once("../initialize.php");
 //register payment
 
+//creates payment object
 $payment = new Payment();
 $date = strftime('%Y-%m-%d %H:%M:%S', time());
 if(isset($_POST)){
@@ -12,6 +13,7 @@ if(isset($_POST)){
   $payment->description = $_POST["description"];
 
   if ($payment && $payment->save()){
+      //logging the payment action
       $worker = Worker::find_by_id($session->worker_id);
       $worker_name = $worker->get_full_name();
       $name = Deadbody::find_by_id($payment->paid_for)->get_full_name();
