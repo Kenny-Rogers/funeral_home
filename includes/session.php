@@ -1,9 +1,8 @@
 <?php
-//session class manages the worker login and logout pages
-//NOTE:: never store db-related objects in sessions since they can be
-//inconsistent with the db on update of the db by another worker
+//session class manages the user login and logout pages
+
 class Session{
-  //stores the state of a worker as logged in or not
+  //stores the state of a user as logged in or not
   private $logged_in=false;
   //stores the worker_id of the logged in worker
   public $worker_id;
