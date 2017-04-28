@@ -1,5 +1,5 @@
 <?php
-//include all the variables used in the site folder
+//include all the variables used in the site1 folder
 //initialized to a default value
 
 //LOCATION:: includes/public/page_loader.php
