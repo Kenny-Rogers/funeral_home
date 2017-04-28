@@ -14,7 +14,7 @@ switch ($page) {
     break;
 
   case 'display_info':
-    $display =  ADMIN_PAGES.DS."display_info.php";
+    $display =  GENERAL_PAGES.DS."display_info.php";
     $class_f = "active";
     break;
 
