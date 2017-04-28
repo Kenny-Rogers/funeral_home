@@ -14,6 +14,7 @@
       <li class="header">STAFF MANAGEMENT</li>
       <li class="<?php echo $class_as; ?>"><a href="?page=add_staff"><i class="fa fa-link"></i> <span>Add Staff</span></a></li>
       <li class="<?php echo $class_rs; ?>"><a href="?page=remove_staff"><i class="fa fa-link"></i> <span>Remove Staff</span></a></li>
+      <li class="<?php echo $class_sl; ?>"><a href="?page=staff_log"><i class="fa fa-link"></i> <span>Staff Logs</span></a></li>
     </ul>
     <!-- /.sidebar-menu -->
   </section>
