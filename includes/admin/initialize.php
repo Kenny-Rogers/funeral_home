@@ -1,5 +1,7 @@
 <?php
-//defines the core paths to allow for the require_once to work
+//defines the core paths , classes and constants 
+
+
 //DIRECTORY_SEPERATOR a pre-defined constant  (\ for windows , / for unix)
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
@@ -38,9 +40,10 @@ define('ACCOUNTANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."
 defined('ACTION_PAGES')?null:
 define('ACTION_PAGES', LIB_PATH.DS."admin".DS."action");
 
+//ACTION_PAGES::defines the path to the folder that contains the pages
+//of website section of the system
 defined('WEBSITE_PAGES')?null:
 define('WEBSITE_PAGES', SITE_ROOT.DS."public".DS."site1".DS."pages");
-
 
 //load the config file first
 require_once(LIB_PATH.DS."config.php");
