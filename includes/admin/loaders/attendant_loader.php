@@ -9,12 +9,12 @@ switch ($page) {
     break;
 
   case 'find_info':
-    $display =  ADMIN_PAGES.DS."find_info.php";
+    $display =  GENERAL_PAGES.DS."find_info.php";
     $class_f = "active";
     break;
 
   case 'display_info':
-    $display =  ADMIN_PAGES.DS."display_info.php";
+    $display =  GENERAL_PAGES.DS."display_info.php";
     $class_f = "active";
     break;
 
