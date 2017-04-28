@@ -1,7 +1,7 @@
 <?php
-//loads all the content specific to a user{Administrator, Attendant, Accountant}
+//loads all the content {menu,page_loader}
+//specific to a user{Administrator, Attendant, Accountant}
 $role = $worker->get_role();
-
 
 switch ($role) {
   case 'admin':
@@ -25,5 +25,6 @@ switch ($role) {
     break;
 }
 
+//includes the correct file
 require_once($page_loader);
 ?>
