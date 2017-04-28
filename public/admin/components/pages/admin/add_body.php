@@ -20,7 +20,7 @@
 ?>
 <div class="row">
   <div class="col-md-offset-2 col-md-10">
-    <?php output_message($message, $class)?>
+    <?php output_message($message, $class); ?>
   </div>
 </div>
 <div class="row">
