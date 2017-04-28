@@ -2,9 +2,8 @@
 require_once(LIB_PATH.DS.'database.php');
 
 class Deadbody extends DatabaseObject {
-  //this class interacts with the worker table in the database
-  //NOTE::for very large tables, you can use mysqli's show_fields_from(TABLE_NAME)
-  //get a list of attributes to be used
+  //this class interacts with the deadbody table in the database
+
   protected static $table_name="deadbody";
   protected static $db_fields=array('id', 'address', 'date_of_birth', 'religion',
     'full_name', 'gender', 'date_of_death', 'cause_of_death', 'status');
@@ -17,11 +16,11 @@ class Deadbody extends DatabaseObject {
   protected $religion;
   protected $cause_of_death;
   protected $status;
-  protected $relative;
-  protected $storage;
-  protected $requested_services = array();
+  public $relative;
+  public $storage;
+  public $requested_services = array();
 
-
+  //setters and getters for protected fields
   public function set_full_name($full_name=""){
     $this->full_name = $full_name;
   }
@@ -86,19 +85,25 @@ class Deadbody extends DatabaseObject {
     return $this->status;
   }
 
+  //custom method for storing object's info in db
   public function record(){
+    //store deadbody object first
     $this->create();
+
+    //creates storage information for the deadbody
     $this->storage = new Storage();
     $this->storage->find_next_compartment();
     $this->storage->set_dead_no($this->id);
     $this->storage->set_status("occupied");
 
+    //create basic service object related to this object
     $service = new RequestedService();
     $service->rel_no = 'null';
     $service->service_no = 1;
     $service->dead_no = $this->id;
     $this->requested_service[] = $service;
 
+    //stores storage and service information
     if($this->storage->save() && $service->save()){
       return true;
     } else {
