@@ -17,8 +17,8 @@ class Deadbody extends DatabaseObject {
   protected $cause_of_death;
   protected $status;
   public $relative;
-  public $storage;
   public $requested_services = array();
+  public $compartment;
 
   //setters and getters for protected fields
   public function set_full_name($full_name=""){
@@ -50,7 +50,16 @@ class Deadbody extends DatabaseObject {
   }
 
   public function set_status($txt=""){
-    $this->status = $txt;
+    if ( $txt == "released" ) {
+      //releasing a body
+      $this->status = $txt;
+      //finding the compartment containing the deadbody
+      $this->compartment = array_shift(Compartment::find_all(" WHERE dead_no='$this->id' LIMIT 1"));
+      //freeing the compartment
+      $this->compartment->status = "free";
+      //storing the information
+      $this->compartment->save();
+    }
   }
 
   public function get_full_name(){
@@ -91,10 +100,16 @@ class Deadbody extends DatabaseObject {
     $this->create();
 
     //creates storage information for the deadbody
-    $this->storage = new Storage();
-    $this->storage->find_next_compartment();
-    $this->storage->set_dead_no($this->id);
-    $this->storage->set_status("occupied");
+    // $this->storage = new Storage();
+    // $this->storage->find_next_compartment();
+    // $this->storage->set_dead_no($this->id);
+    // $this->storage->set_status("occupied");
+
+    //stores new deadbody in compartment
+    $sql = "SELECT * FROM compartment WHERE status='free' LIMIT 1";
+    $this->compartment = array_shift(Compartment::find_by_sql($sql));
+    $this->compartment->status = "occupied";
+    $this->compartment->dead_no = $this->id;
 
     //create basic service object related to this object
     $service = new RequestedService();
@@ -104,7 +119,7 @@ class Deadbody extends DatabaseObject {
     $this->requested_service[] = $service;
 
     //stores storage and service information
-    if($this->storage->save() && $service->save()){
+    if($this->compartment->save() && $service->save()){
       return true;
     } else {
       return false;
