@@ -3,8 +3,6 @@ require_once(LIB_PATH.DS.'database.php');
 
 class Worker extends DatabaseObject {
   //this class interacts with the worker table in the database
-  //NOTE::for very large tables, you can use mysqli's show_fields_from(TABLE_NAME)
-  //get a list of attributes to be used
   protected static $table_name="worker";
   protected static $db_fields=array('id', 'email', 'password',
     'full_name', 'gender', 'role', 'telephone', 'status');
@@ -29,6 +27,8 @@ class Worker extends DatabaseObject {
     return !empty($result_array)?array_shift($result_array):false;
   }
 
+
+  //setters and getters for protected feilds
   public function set_full_name($full_name=""){
     $this->full_name = $full_name;
   }
