@@ -1,4 +1,9 @@
 <?php
+  include("../../../includes/admin/initialize.php");
+
+  //including a page loader
+  include("../../../includes/admin/loaders/relative_loader.php");
+
   //include html page head{<!DOCTYPE><head>-------</head>}
   include("components/head.php");
 
