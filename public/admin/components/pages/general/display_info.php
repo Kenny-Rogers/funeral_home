@@ -20,11 +20,15 @@
     <!-- including page to display body information -->
     <?php include(GENERAL_PAGES.DS."body_info.php");?>
 
-    <!-- including page to display service information -->
-    <?php include(GENERAL_PAGES.DS."service_info.php"); ?>
+    <?php if ($role != "accountant") { ?>
+      <!-- including page to display service information -->
+      <?php include(GENERAL_PAGES.DS."service_info.php"); ?>
+    <?php } ?>
 
-    <!-- including page to display payment information -->
-    <?php include(GENERAL_PAGES.DS."payment_info.php"); ?>
+    <?php if ($role != "attendant") { ?>
+      <!-- including page to display payment information -->
+      <?php include(GENERAL_PAGES.DS."payment_info.php"); ?>
+    <?php } ?>
 <?php } else {
       //if the body_id doesnot exist
 ?>
