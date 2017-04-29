@@ -12,9 +12,6 @@ class RequestedService extends DatabaseObject {
   public $service_no;
   public $worker_no;
   public $status;
-
-  // public function update(){
-  //   parent::update();
-  // }
+  
 }
 ?>
