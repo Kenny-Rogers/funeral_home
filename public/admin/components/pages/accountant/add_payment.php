@@ -12,10 +12,6 @@
      $class = "fail";
      break;
 
-   default:
-     $message = "Please Complete Form";
-     $class = "info";
-     break;
  }
 ?>
 <?php
