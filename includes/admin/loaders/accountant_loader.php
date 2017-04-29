@@ -14,7 +14,12 @@ switch ($page) {
     break;
 
   case 'find_payment':
-    $display =  ACCOUNTANT_PAGES.DS."find_payment.php";
+    $display =  GENERAL_PAGES.DS."find_info.php";
+    $class_f = "active";
+    break;
+
+  case 'display_info':
+    $display =  GENERAL_PAGES.DS."display_info.php";
     $class_f = "active";
     break;
 
