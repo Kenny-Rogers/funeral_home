@@ -15,6 +15,7 @@
     $date=format_date(strtotime($_POST["date_of_death"]));
     $deadbody->set_date_of_death($date);
     $deadbody->set_cause_of_death($_POST["cause_of_death"]);
+    $deadbody->set_days_spent();
     $deadbody->set_status("admitted");
 
     //save the object to db
