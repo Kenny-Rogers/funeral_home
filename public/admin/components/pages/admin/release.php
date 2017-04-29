@@ -20,15 +20,24 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($deadbodies as $deadbody): ?>
-                    <tr>
+                  <?php foreach ($deadbodies as $deadbody):
+                      $net_amount = $deadbody->get_total_credit() - $deadbody->get_total_debit();
+                      $class = "";
+                      if ($net_amount >= 0) { $class = "success"; }
+                      else { $class = "danger"; }
+                  ?>
+                    <tr class="<?php echo $class ?>" >
                     <td><?php echo $deadbody->id; ?></td>
                     <td><?php echo $deadbody->get_full_name(); ?></td>
                     <td><?php echo $deadbody->get_days_spent();?></td>
-                    <td>-</td>
+                    <td><?php echo $deadbody->get_relative(); ?></td>
                     <td><?php echo $deadbody->get_total_debit();?></td>
                     <td><?php echo $deadbody->get_total_credit();?></td>
-                    <td><a href="?page=release_info&body_id=<?php echo $deadbody->id; ?>">Release</a></td>
+                    <?php if ($net_amount >= 0){  ?>
+                      <td><a href="?page=release_info&body_id=<?php echo $deadbody->id; ?>">Release</a></td>
+                    <?php } else { ?>
+                      <td><a href="?page=release#">Release</a></td>
+                    <?php } ?>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
