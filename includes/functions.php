@@ -53,12 +53,12 @@ function __autoload($class_name){
 
   function datetime_to_text($datetime=""){
     //displays the date in a different format
-    $unixdatetime=strtotime($datatime);
-    return Strftime("%B %d, %Y at %I:%M %p", $unixdatetime);
+    $unixdatetime=strtotime($datetime);
+    return strftime("%B %d, %Y", $unixdatetime);
   }
 
   //makes a date acceptable to mysql database
-  function format_date($dt){
+  function format_date($dt=""){
   	//$dt=time();
   	$mysql_date=strftime("%Y-%m-%d", $dt);
   	return  $mysql_date;
