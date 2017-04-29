@@ -14,7 +14,7 @@ class Relative extends DatabaseObject {
 
 
   public function full_name(){
-    return $full_name;
+    return $this->full_name;
   }
 
 }
