@@ -5,7 +5,8 @@
   if ($deadbody) {
     //if the body_id provides a body
     $deadbody->compartment = array_shift(Compartment::find_all(" WHERE dead_no='$body_id' LIMIT 1"));
-    $services = RequestedService ::find_by_sql("SELECT * FROM requested_service WHERE dead_no='{$body_id}'");
+    $services = RequestedService::find_by_sql("SELECT * FROM requested_service WHERE dead_no='{$body_id}'");
+    $payments = Payment::find_all(" WHERE paid_for='$body_id'");
 ?>
     <?php
         if (isset($_GET["stat"])) {
