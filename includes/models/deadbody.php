@@ -122,6 +122,7 @@ class Deadbody extends DatabaseObject {
     $service->rel_no = 'null';
     $service->service_no = 1;
     $service->dead_no = $this->id;
+    $service->status="TODO";
     $this->requested_service[] = $service;
 
     //stores storage and service information
@@ -133,7 +134,13 @@ class Deadbody extends DatabaseObject {
   }
 
   public function get_relative(){
-    return $this->relative->full_name();
+    //returns the name of the relative
+    $this->relative = array_shift(Relative::find_all(" WHERE dead_no = '{$this->id}' LIMIT 1"));
+    if ($this->relative) {
+      return $this->relative->full_name();
+    } else {
+      return "Not Specified";
+    }
   }
 
   public function get_services_cost(){
@@ -191,6 +198,16 @@ class Deadbody extends DatabaseObject {
     }
 
     return $total_credits;
+  }
+
+  public function get_compartment(){
+    //returns the storage compartment for a dead body
+    $this->compartment = array_shift(Compartment::find_all(" WHERE dead_no = '{$this->id}' LIMIT 1"));
+    if ($this->compartment) {
+      return $this->compartment->description;
+    } else {
+      return "Not specified";
+    }
   }
 
 }
