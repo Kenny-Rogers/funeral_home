@@ -51,6 +51,10 @@ class Deadbody extends DatabaseObject {
     $this->cause_of_death = $txt;
   }
 
+  public function set_days_spent($txt=0){
+    $this->days_spent = $txt;
+  }
+
   public function set_status($txt=""){
     if ( $txt == "released" ) {
       //releasing a body
