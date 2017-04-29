@@ -143,6 +143,16 @@ class Deadbody extends DatabaseObject {
     }
   }
 
+  public function get_contact(){
+    //returns the name of the relative
+    $this->relative = array_shift(Relative::find_all(" WHERE dead_no = '{$this->id}' LIMIT 1"));
+    if ($this->relative) {
+      return $this->relative->contact();
+    } else {
+      return "Not Specified";
+    }
+  }
+
   public function get_services_cost(){
     //gets all the cost of requested services on the deadbody
     //find all the requested services on a deadbody
