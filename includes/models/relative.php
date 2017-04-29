@@ -17,5 +17,9 @@ class Relative extends DatabaseObject {
     return $this->full_name;
   }
 
+  public function contact(){
+    return $this->telephone;
+  }
+
 }
 ?>
