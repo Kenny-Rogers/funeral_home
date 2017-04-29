@@ -2,6 +2,7 @@
 require_once("../initialize.php");
 //register payment
 
+$date = format_date(time());
 //creates payment object
 $payment = new Payment();
 if(isset($_POST)){
@@ -9,6 +10,7 @@ if(isset($_POST)){
   $payment->paid_by = $_POST["paid_by"];
   $payment->paid_for = $_POST["paid_for"];
   $payment->description = $_POST["description"];
+  $payment->date_paid = $date;
 
   if ($payment && $payment->save()){
       //logging the payment action
