@@ -38,7 +38,12 @@ define('ACCOUNTANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."
 //ACTION_PAGES::defines the path to the folder that contains the pages
 //of website section of the system
 defined('GENERAL_PAGES')?null:
-define('GENERAL_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."general");
+define('GENERAL_PAGES',  SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."general");
+
+//RELATIVE_PAGES::defines the path to the folder that contains the pages
+//of website section of the system
+defined('RELATIVE_PAGES')?null:
+define('RELATIVE_PAGES',SITE_ROOT.DS."public".DS."admin".DS."relative".DS."components".DS."pages");
 
 //ACTION_PAGES::defines the path to the folder that contains the pages
 //of the Administrator
