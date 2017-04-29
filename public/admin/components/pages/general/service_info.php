@@ -35,8 +35,8 @@
                             else { $worker_name = "-"; }
 
                             //checking if service is DONE or _TODO
-                            if ($service->status == "TODO") { $class = "danger"; }
-                            elseif ($service->status == "DONE") { $class = "success"; }
+                            if (stristr($service->status, "TODO")) { $class = "danger"; }
+                            elseif (stristr($service->status, "DONE")) { $class = "success"; }
                         ?>
                         <tr class="<?php echo $class; ?>">
                         <td><?php echo $real_service->name; ?></td>
