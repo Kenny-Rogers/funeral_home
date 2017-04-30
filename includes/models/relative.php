@@ -7,10 +7,10 @@ class Relative extends DatabaseObject {
   protected static $db_fields=array('id', 'full_name', 'address', 'telephone',
     'email');
   public $id;
-  protected $full_name;
-  protected $address;
-  protected $telephone;
-  protected $email;
+  public $full_name;
+  public $address;
+  public $telephone;
+  public $email;
 
 
   public function full_name(){
