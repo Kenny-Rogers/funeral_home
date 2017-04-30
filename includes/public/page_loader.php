@@ -16,8 +16,8 @@ switch ($page) {
     $class_s = "active";
     break;
 
-  case 'obitruaries':
-    $display = "";
+  case 'obituaries':
+    $display = WEBSITE_PAGES.DS."obituary.php";
     $class_o = "active";
     break;
 
@@ -27,12 +27,12 @@ switch ($page) {
     break;
 
   case 'login':
-    $display = "";
+    $display = WEBSITE_PAGES.DS."register1.php";
     $class_l = "active";
     break;
 
   default:
-    $display = "";
+    $display = WEBSITE_PAGES.DS."home.php";
     $class_h = "active";
     break;
 }
