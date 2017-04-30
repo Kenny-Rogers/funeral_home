@@ -8,7 +8,7 @@ defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 //SITE_ROOT::defines the file system path to the project
 //must be changed if on a different machine
 defined('SITE_ROOT')?null:
-define('SITE_ROOT', 'I:'.DS.'xampp'.DS.'htdocs'.DS.'funeralHome');
+define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html'.DS.'funeral_home');
 
 //LIB_PATH::defines the path to the includes folder which contains all
 //the libraries
@@ -55,6 +55,10 @@ define('ACTION_PAGES', LIB_PATH.DS."admin".DS."action");
 defined('WEBSITE_PAGES')?null:
 define('WEBSITE_PAGES', SITE_ROOT.DS."public".DS."site1".DS."pages");
 
+//RECIEPTS::defines the path to the folder that contains the reciepts
+//of payments generated
+defined('RECIEPTS')?null:
+define('RECIEPTS', SITE_ROOT.DS."public".DS."reciepts");
 
 //load the config file first
 require_once(LIB_PATH.DS."config.php");
