@@ -1,7 +1,7 @@
+<?php include("../../includes/admin/initialize.php");?>
 <!-- Index file for application side  -->
 
 <!--Php code which is uded to initialize all variables present  -->
-<?php include("../../includes/admin/initialize.php");?>
 
 <?php
       if(!$session->is_logged_in()){
