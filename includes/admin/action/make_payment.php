@@ -1,5 +1,5 @@
 <?php
-require_once("../initialize.php");
+//require_once("../initialize.php");
 //register payment
 
 $date = format_date(time());
@@ -18,10 +18,15 @@ if(isset($_POST)){
       $worker_name = $worker->get_full_name();
       $name = Deadbody::find_by_id($payment->paid_for)->get_full_name();
       Log::log_action("Accounts", "{$worker_name} recorded payment for {$name}");
-      redirect_to("../../../public/admin/index.php?page=add_payment&stat=1");
+      if ($payment->print_receipt()){
+        $file_name = $payment->reciept;
+        echo "<iframe src=\"$file_name\" width=\"1100px\" style=\"height:700px\"></iframe>";
+      } else{
+        output_message("failed to print reciept", "fail");
+      }
+      //redirect_to("../../../public/admin/index.php?page=add_payment&stat=1");
   }else{
       redirect_to("../../../public/admin/index.php?page=add_payment&stat=2");
   }
 }
-
 ?>
