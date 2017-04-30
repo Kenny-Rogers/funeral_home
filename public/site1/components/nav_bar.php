@@ -7,7 +7,7 @@
 
                     <div id="divLogo" class="pull-left">
                         <a href="index.html" id="divSiteTitle">CrossOver</a><br />
-                        <a href="index.html" id="divTagLine">Your Tag Line Here</a>
+                        <a href="index.html" id="divTagLine">Your loss is our loss</a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -19,7 +19,7 @@
                             <ul class="nav nav-pills ddmenu">
                               <li class="dropdown <?php echo "$class_h"; ?>"><a href="?page=home">Home</a></li>
 								              <li class="dropdown <?php echo "$class_s"; ?>"><a href="?page=services">Services</a></li>
-                            	<li class="dropdown <?php echo "$class_o"; ?>"><a href="?page=obitruaries">Obitruaries</a></li>
+                            	<li class="dropdown <?php echo "$class_o"; ?>"><a href="?page=obituaries">Obituaries</a></li>
                               <li class="dropdown <?php echo "$class_a"; ?>"><a href="?page=about_us">About Us</a></li>
                               <li class="dropdown <?php echo "$class_l"; ?>"><a href="?page=login">Login</a></li>
                             </ul>

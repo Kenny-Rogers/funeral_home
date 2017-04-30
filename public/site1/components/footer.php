@@ -11,43 +11,21 @@
 
                     <h3>About Company</h3>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+                    <p>Our mission is to offer a wide range of innovative funeral services, products, options and information pertaining to end of kife issues and to offer this within every family's financial maeans.
+                      We are committed to provide this in a supportive and respectful environment.</p>
 
                     <p>
-                        <a href="#" title="Terms of Use">Terms of Use</a><br />
-                        <a href="#" title="Privacy Policy">Privacy Policy</a><br />
-                        <a href="#" title="FAQ">FAQ</a><br />
-                        <a href="#" title="Sitemap">Sitemap</a>
+                      <a href="../../public/admin/login.php" title="Sitemap">Staff Login</a>
                     </p>
 
                 </div>
                 <div class="span3" id="footerArea2">
 
-                    <!--h3>Recent Blog Posts</h3>
-                    <p>
-                        <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
-                        <span style="text-transform:none;">2 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Duis mollis, est non commodo luctus</a><br />
-                        <span style="text-transform:none;">5 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Maecenas sed diam eget risus varius</a><br />
-                        <span style="text-transform:none;">19 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">VIEW ALL POSTS</a>
-                    </p-->
-
+<h4><p>"When someone you love becomes a memory, the memory becomes a treasure"</p></h4>
                 </div>
                 <div class="span3" id="footerArea3">
 
-                    <h3>Sample Content</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
-                    </p>
+              <h4><p>"Sometimes your only available transportation is a leap of faith"</p></h4>
 
                 </div>
                 <div class="span3" id="footerArea4">
