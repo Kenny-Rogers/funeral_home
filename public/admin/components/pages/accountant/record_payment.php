@@ -9,7 +9,7 @@
   </div>
   <!-- /.box-header -->
   <!-- form start -->
-  <form role="form" method="post" action="../../includes/admin/action/make_payment.php">
+  <form role="form" method="post" action="?page=make_payment">
     <div class="box-body">
       <div class="form-group">
         <input type="text" name="paid_for" value="<?php echo $body_id; ?>" hidden>
