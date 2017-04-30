@@ -1,8 +1,5 @@
-	<!-- Index file for website -->
-
-
-	<!--Php code which is uded to initialize all variables present -->
 <?php include("../../includes/admin/initialize.php");?>
+<!--Php code which is uded to initialize all variables present -->
 
 <!-- including a php file which enables web pages to be loaded   -->
 <?php include("../../includes/public/page_loader.php"); ?>
