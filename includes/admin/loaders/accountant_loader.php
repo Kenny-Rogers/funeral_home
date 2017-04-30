@@ -24,6 +24,15 @@ switch ($page) {
     $page_desc = "find all payments for a specific body";
     break;
 
+  case 'make_payment':
+    $display =  LIB_PATH.DS."admin".DS."action".DS."make_payment.php";
+    $class_ac = "active";
+    $page_title = "Print Payment";
+    $page_desc = "print reciept of last recorded payment";
+    break;
+
+
+
   case 'display_info':
     $display =  GENERAL_PAGES.DS."display_info.php";
     $class_f = "active";
