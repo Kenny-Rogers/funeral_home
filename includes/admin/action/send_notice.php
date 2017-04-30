@@ -13,14 +13,14 @@
     $full_name = $deadbody->get_full_name();
     switch ($code) {
       case 1:
-        $message = "This is a notice to you to remind you of your debt in ".
+        $message = "Dear Client, this is a notice to you to remind you of your debt in ".
                     "relation to THE LATE {$full_name} being worked on by CrossOver Limited. ".
                     "Failure to settle debt would result in sanctions including ".
                     "legal actions.";
         break;
 
       case 2:
-        $message = "This is a notice to you to inform you of the release of your ".
+        $message = "Dear Client, this is a notice to you to inform you of the release of your ".
                     "relative, THE LATE {$full_name}. Please visit our website to ".
                     "review our services so that we can serve you better. https://www.crossover.com";
         break;
@@ -35,11 +35,17 @@
     }
     return $message;
   }
-  $number = "233554598026";
+
+  //get relative contact
+  $number = $deadbody->get_contact();
+  
+  if (stristr("Not Specified", $number)){
+    redirect_to("../../../public/admin/index.php?page=notify&stat=2");
+  }
 
   $message = decode_message($message_code, $deadbody);
 
-  if (Message::send_message( $number, $message)){
+  if (Message::send_message($number, $message)){
       $worker = Worker::find_by_id($session->worker_id);
       $worker_name = $worker->get_full_name();
       $deadbody_name = $deadbody->get_full_name();

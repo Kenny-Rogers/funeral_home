@@ -3,12 +3,14 @@
 <!--Php code which is uded to initialize all variables present  -->
 <?php include("../../includes/admin/initialize.php");?>
 
-<?php if(!$session->is_logged_in()){
+<?php
+      if(!$session->is_logged_in()){
           redirect_to('login.php');
       }else{
           $worker_id = $session->worker_id;
           $worker = Worker::find_by_id($worker_id);
-      } ?>
+    }
+?>
 
 <!-- including a php file which enables pages of specific users of the application to be loaded   -->
 <?php include("../../includes/admin/user_loader.php");?>

@@ -21,3 +21,6 @@
     <?php output_message($message, $class)?>
   </div>
 </div>
+
+<!-- including page to display body information -->
+<?php include(GENERAL_PAGES.DS."body_info.php");?>

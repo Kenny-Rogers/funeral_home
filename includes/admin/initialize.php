@@ -1,5 +1,7 @@
 <?php
-//defines the core paths to allow for the require_once to work
+//defines the core paths , classes and constants
+
+
 //DIRECTORY_SEPERATOR a pre-defined constant  (\ for windows , / for unix)
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
@@ -34,10 +36,22 @@ defined('ACCOUNTANT_PAGES')?null:
 define('ACCOUNTANT_PAGES', SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."accountant");
 
 //ACTION_PAGES::defines the path to the folder that contains the pages
+//of website section of the system
+defined('GENERAL_PAGES')?null:
+define('GENERAL_PAGES',  SITE_ROOT.DS."public".DS."admin".DS."components".DS."pages".DS."general");
+
+//RELATIVE_PAGES::defines the path to the folder that contains the pages
+//of website section of the system
+defined('RELATIVE_PAGES')?null:
+define('RELATIVE_PAGES',SITE_ROOT.DS."public".DS."admin".DS."relative".DS."components".DS."pages");
+
+//ACTION_PAGES::defines the path to the folder that contains the pages
 //of the Administrator
 defined('ACTION_PAGES')?null:
 define('ACTION_PAGES', LIB_PATH.DS."admin".DS."action");
 
+//ACTION_PAGES::defines the path to the folder that contains the pages
+//of website section of the system
 defined('WEBSITE_PAGES')?null:
 define('WEBSITE_PAGES', SITE_ROOT.DS."public".DS."site1".DS."pages");
 

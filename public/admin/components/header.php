@@ -1,7 +1,7 @@
 <?php $full_name = $worker->get_full_name(); ?>
 <header class="main-header">
   <!-- Logo -->
-  <a href="index2.html" class="logo">
+  <a href="#" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>C</b>O</span>
     <!-- logo for regular state and mobile devices -->
@@ -17,28 +17,13 @@
     <!-- Navbar Right Menu -->
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        <!-- User Account Menu -->
-        <li class="dropdown user user-menu">
-          <!-- Menu Toggle Button -->
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="hidden-xs"><i class="fa fa-user"></i><?php echo "{$full_name}"; ?></span>
-          </a>
-          <ul class="dropdown-menu">
-            <!-- The user image in the menu -->
-            <li class="user-header">
-              <p><?php echo "{$full_name}"; ?></p>
-            </li>
-            <!-- Menu Footer-->
-            <li class="user-footer">
-              <!--div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
-              </div-->
-              <div class="pull-right">
-                <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
-              </div>
-            </li>
-          </ul>
-        </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <?php echo "{$full_name}"; ?> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Sign out</span></a></li>
+            </ul>
+          </li>
       </ul>
     </div>
   </nav>

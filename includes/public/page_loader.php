@@ -1,6 +1,7 @@
 <?php
 include("init_vars.php");
 //checks the requested page and set the display to the requested page
+//and makes that link active
 // USED if-else shortcut :: (condition) ? true case : false case
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 

@@ -1,4 +1,5 @@
 <?php
+//gets suggestion for names
 include('../initialize.php');
 $page="display_info";
 $q=$_GET['q'];

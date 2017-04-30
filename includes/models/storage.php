@@ -2,16 +2,13 @@
 require_once(LIB_PATH.DS.'database.php');
 
 class Storage extends DatabaseObject {
-  //this class interacts with the payment table in the database
-  //NOTE::for very large tables, you can use mysqli's show_fields_from(TABLE_NAME)
-  //get a list of attributes to be used
+  //this class interacts with the storage table in the database
   protected static $table_name = "storage";
   protected static $db_fields = array('id', 'comp_no', 'dead_no', 'status');
   public $id;
-  protected $comp_no;
+  public $comp_no;
   protected $dead_no;
   protected $status;
-
 
 
   public function find_next_compartment(){

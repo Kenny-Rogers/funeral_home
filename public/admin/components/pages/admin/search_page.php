@@ -29,7 +29,7 @@
 </div>
 
 <div class="row">
-<div class="col-md-3 iPhone-features">
+<div class="col-md-offset-3 col-md-6 iPhone-features">
   <div class="list-group">
       <span id="txtHint"></span>
     <div>
