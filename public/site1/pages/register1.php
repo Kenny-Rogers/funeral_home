@@ -14,7 +14,7 @@
 					<hr> <br></br>
           <form>
                     <font color ="violet" size = "6">Enter Receipt Number:</font><br></br>
-                    <input type ="text" class="form-control" name="receiptNo"><br>
+                    <input type ="text" class="form-control" name="receiptNo" required><br>
                     <input type="submit"  value="Continue" class="btn btn-default">
 
 			<div class="row-fluid">
@@ -35,23 +35,23 @@
     <form>
     <div class="form-group">
     <label for="email">Receipt Number:</label>
-    <input type ="text" class="form-control" name="receiptNo">
+    <input type ="text" class="form-control" name="receiptNo" required>
     </div>
     <div class="form-group">
     <label for="email"> Full Name:</label>
-    <input type="email" class="form-control" name="full_name">
+    <input type="email" class="form-control" name="full_name" required>
     </div>
     <div class="form-group">
     <label for="pwd">Email Address:</label>
-    <input type="password" class="form-control" name="email">
+    <input type="password" class="form-control" name="email" required>
     </div>
     <div class="form-group">
     <label for="pwd">Address:</label>
-    <input type="password" class="form-control" name="address">
+    <input type="password" class="form-control" name="address" required>
     </div>
     <div class="form-group">
     <label for="pwd">Telephone:</label>
-    <input type="password" class="form-control" name="telephone">
+    <input type="password" class="form-control" name="telephone" required>
     </div>
 
     <button type="submit" class="btn btn-default">Submit</button>
