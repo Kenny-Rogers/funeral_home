@@ -6,7 +6,7 @@ defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 //SITE_ROOT::defines the file system path to the project
 //must be changed if on a different machine
 defined('SITE_ROOT')?null:
-define('SITE_ROOT', DS.'var'.DS.'www'.DS.'html'.DS.'funeral_home');
+define('SITE_ROOT', 'I:'.DS.'xampp'.DS.'htdocs'.DS.'funeralHome');
 
 //LIB_PATH::defines the path to the includes folder which contains all
 //the libraries
