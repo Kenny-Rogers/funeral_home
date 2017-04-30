@@ -3,14 +3,14 @@
     <div class="divPanel page-content">
 
         <div class="breadcrumbs">
-                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Simple</span>
+                <a href="index.php">Home</a> &nbsp;/&nbsp; <span>Simple</span>
             </div>
 
         <div class="row-fluid">
 			<!--Edit Main Content Area here-->
                 <div class="span8" id="divMain">
 
-                    <font color ="violet" size ="8"> <center>Register Corpse</center></font>
+                    <font color ="violet" size ="8"> <center>Register</center></font>
 					<hr> <br></br>
           <form>
                     <font color ="violet" size = "6">Enter Receipt No:</font><br></br>
