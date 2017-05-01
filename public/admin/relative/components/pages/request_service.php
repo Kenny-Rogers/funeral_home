@@ -1,6 +1,6 @@
 <?php
-  $body_no = 43;
- $status = isset($_GET['stat'])?$_GET['stat']:0;
+  $body_no = $relative->dead_no;
+  $status = isset($_GET['stat'])?$_GET['stat']:0;
 
  switch ($status) {
    case 1:
