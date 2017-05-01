@@ -18,6 +18,6 @@
     //else display error message
     $message="Username/password combination incorrect";
     Log::log_action("Login", "Login Failed");
-    redirect_to("../../../public/admin/login.php");
+    redirect_to("../../../public/admin/login.php?stat=2");
   }
 ?>

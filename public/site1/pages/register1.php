@@ -6,13 +6,26 @@
                 <a href="index.php">Home</a> &nbsp;/&nbsp; <span>Simple</span>
             </div>
 
+            <div class="row">
+              <div class="col-xs-9">
+              <?php
+                  if ($_GET['stat'] == 2) {
+                    output_message("Login failed", "fail");
+                  } else {
+                    output_message("");
+                  }
+              ?>
+            </div>
+            </div>
+
+
         <div class="row-fluid">
 			<!--Edit Main Content Area here-->
                 <div class="span8" id="divMain">
 
                     <font color ="violet" size ="8"> Login </font>
 					<hr> <br></br>
-          <form method="post" action="pages/login_action.php">
+                    <form method="post" action="pages/login_action.php">
                     <font color ="violet" size = "6">Enter Receipt Number:</font><br></br>
                     <input type ="text" class="form-control" name="receipt_no" required><br>
                     <input type="submit"  value="Continue" class="btn btn-default">
