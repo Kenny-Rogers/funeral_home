@@ -60,7 +60,7 @@ class DatabaseObject{
 
   public static function find_all($with_details=""){
     //returns all records stored in the table specified in the child class
-    return self::find_by_sql("SELECT * FROM ".static::$table_name."{$with_details}");
+    return self::find_by_sql("SELECT * FROM ".static::$table_name." {$with_details}");
   }
 
   public static function find_by_id($id=0){
