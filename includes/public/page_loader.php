@@ -32,6 +32,16 @@ switch ($page) {
     $class_l = "active";
     break;
 
+  case 'confirm_register':
+    $display = WEBSITE_PAGES.DS."confirm_register.php";
+    $class_l = "active";
+    break;
+
+  case 'register_status':
+    $display = WEBSITE_PAGES.DS."register_status.php";
+    $class_l = "active";
+    break;
+
   default:
     $display = WEBSITE_PAGES.DS."home.php";
     $class_h = "active";
