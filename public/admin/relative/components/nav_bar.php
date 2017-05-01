@@ -28,7 +28,7 @@
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <li>  <a href="#" class=""><i class="fa fa-sign-out"></i><span>Sign out</span></a> </li>
+          <li>  <a href="components/pages/logout.php" class=""><i class="fa fa-sign-out"></i><span>Sign out</span></a> </li>
         </ul>
       </div>
       <!-- /.navbar-custom-menu -->
