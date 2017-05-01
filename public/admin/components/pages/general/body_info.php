@@ -40,8 +40,8 @@
           <input type="text" class="form-control" id="pwd" value="<?php //echo $deadbody->get_relative();?>" disabled>
         </div-->
         <div class="form-group">
-          <label for="pwd">Compartment Number:</label>
-          <input type="text" class="form-control" id="pwd" value="<?php echo $deadbody->compartment->id; ?>" disabled>
+          <label for="pwd">Compartment Information:</label>
+          <input type="text" class="form-control" id="pwd" value="<?php echo $deadbody->compartment->description; ?>" disabled>
         </div>
         </form>
         </div>
