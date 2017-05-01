@@ -1,5 +1,5 @@
 <?php
-  $body_id=42;
+  $body_id = $relative->dead_no;
   $deadbody = Deadbody::find_by_id($body_id);
 
   if ($deadbody) {
