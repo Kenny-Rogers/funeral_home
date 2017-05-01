@@ -12,9 +12,9 @@
 
                     <font color ="violet" size ="8"> Login </font>
 					<hr> <br></br>
-          <form>
+          <form method="post" action="pages/login_action.php">
                     <font color ="violet" size = "6">Enter Receipt Number:</font><br></br>
-                    <input type ="text" class="form-control" name="receiptNo" required><br>
+                    <input type ="text" class="form-control" name="receipt_no" required><br>
                     <input type="submit"  value="Continue" class="btn btn-default">
 
 			<div class="row-fluid">
@@ -32,26 +32,26 @@
           <div class="sidebox">
               <h3 class="sidebox-title"><font color ="violet" size ="8"> Register </font></h3>
 
-    <form>
+    <form method="post" action="?page=confirm_register">
     <div class="form-group">
     <label for="email">Receipt Number:</label>
-    <input type ="text" class="form-control" name="receiptNo" required>
+    <input type ="number" class="form-control" name="receipt_no" required>
     </div>
     <div class="form-group">
     <label for="email"> Full Name:</label>
-    <input type="email" class="form-control" name="full_name" required>
+    <input type="text" class="form-control" name="full_name" required>
     </div>
     <div class="form-group">
     <label for="pwd">Email Address:</label>
-    <input type="password" class="form-control" name="email" required>
+    <input type="email" class="form-control" name="email" required>
     </div>
     <div class="form-group">
     <label for="pwd">Address:</label>
-    <input type="password" class="form-control" name="address" required>
+    <input type="text" class="form-control" name="address" required>
     </div>
     <div class="form-group">
     <label for="pwd">Telephone:</label>
-    <input type="password" class="form-control" name="telephone" required>
+    <input type="text" class="form-control" name="telephone" required>
     </div>
 
     <button type="submit" class="btn btn-default">Submit</button>
