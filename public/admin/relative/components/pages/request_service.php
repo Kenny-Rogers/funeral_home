@@ -4,17 +4,17 @@
 
  switch ($status) {
    case 1:
-     $message = "Registration successfull";
+     $message = "Service Request Successfull";
      $class = "success";
      break;
 
    case 2:
-     $message = "Registration failed";
+     $message = "Service Request Failed";
      $class = "fail";
      break;
 
    default:
-     $message = "Please Complete Form";
+     $message = "Please Select a Service to Request";
      $class = "info";
      break;
  }
@@ -34,10 +34,12 @@
   </div>
   <!-- /.box-header -->
   <!-- form start -->
-  <form role="form" method="post" action="../../includes/admin/action/register_staff.php">
+  <form role="form" method="post" action="components/pages/add_service.php">
+      <input type="hidden" name="rel_no" value="<?php echo $relative->id; ?>">
+      <input type="hidden" name="dead_no" value="<?php echo $relative->dead_no; ?>">
       <div class="form-group">
         <label for="">Apply For Service</label>
-        <select class="form-control" name="service">
+        <select class="form-control" name="service_no">
         <?php
           $with = " WHERE id NOT IN (SELECT service_no FROM requested_service WHERE dead_no={$body_no})";
           $services = Service::find_all($with);
