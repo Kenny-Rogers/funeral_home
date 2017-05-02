@@ -1,3 +1,4 @@
+<?php require_once("../../includes/admin/initialize.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,15 +26,25 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
+
 <div class="login-box">
+  <div class="row">
+    <div class="col-xs-12">
+    <?php
+        if ($_GET['stat'] == 2) {
+          output_message("Login failed", "fail");
+        } else if ($_GET['stat'] == 3) {
+          output_message("Logout success", "success");
+        }
+    ?>
+  </div>
+  </div>
   <div class="login-logo">
     <a href="../../index2.html"><b>Cross</b>Over</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
-    <div class="row">
-    </div>
     <form action="../../includes/admin/action/login_action.php" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="email" placeholder="Email">
