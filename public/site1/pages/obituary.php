@@ -16,11 +16,11 @@
                     <hr>
 
 
-					<font color ="violet" size = "5">Lloyd Frank Bitzer</font>
+					<font color ="violet" size = "5">Mrs. Lydia Asante</font>
 
 			<div class="row-fluid">
 		        <div class="span2">
-                    <img src="images/lb.jpg" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
+                    <img src="images/b2.png" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
                 <div class="span10">
                     <font face ="Agency FB" size ="4">1931-2016 <br>NCA President: 1976.
                      <br/> <br/>
@@ -32,11 +32,11 @@
 
 			<hr>
 
-      <font color ="violet" size = "5">Lloyd Frank Bitzer</font>
+      <font color ="violet" size = "5">Mr. Opoku Duah</font>
 
   <div class="row-fluid">
         <div class="span2">
-                <img src="images/nc.jpg" class="img-polaroid" style="margin:5px 0px 25px" alt="">   </div>
+                <img src="images/c3.png" class="img-polaroid" style="margin:5px 0px 25px" alt="">   </div>
             <div class="span10">
                 <font face ="Agency FB" size ="4">1950 - 2015  <br> Grammy Award-winning singer and daughter of legendary jazz singer Nat "King" Cole.
                  <br/> <br/>
@@ -47,11 +47,11 @@
   <hr>
 
   <hr>
-  <font color ="violet" size = "5">Bobbi Brown</font>
+  <font color ="violet" size = "5">Fence Ochere</font>
 
 <div class="row-fluid">
     <div class="span2">
-            <img src="images/bb.jpg" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
+            <img src="images/d4.png" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
         <div class="span10">
             <font face ="Agency FB" size ="4">1993-2015 <br>Daughter of singers Bobby Brown and the late Whitney Houston .
              <br/> <br/>
@@ -63,11 +63,11 @@
 
 <hr>
 
-<font color ="violet" size = "5">James Best</font>
+<font color ="violet" size = "5">Komla Dumor</font>
 
 <div class="row-fluid">
   <div class="span2">
-          <img src="images/jb.jpg" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
+          <img src="images/e5.png" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
       <div class="span10">
           <font face ="Agency FB" size ="4">1926-2015 <br> Prolific character actor best known for his role as Sheriff Rosco P. Coltrane on The Dukes of Hazzard .
            <br/> <br/>
@@ -82,7 +82,7 @@
 
 <div class="row-fluid">
   <div class="span2">
-          <img src="images/dr.jpg" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
+          <img src="images/f6.png" class="img-polaroid" style="margin:5px 0px 15px" alt="">   </div>
       <div class="span10">
           <font face ="Agency FB" size ="4">1945-2015 <br> former professional wrestler known by his fans as Dusty Rhodes .
            <br/> <br/>
