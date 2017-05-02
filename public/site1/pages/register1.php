@@ -11,8 +11,8 @@
               <?php
                   if ($_GET['stat'] == 2) {
                     output_message("Login failed", "fail");
-                  } else {
-                    output_message("");
+                  } else if($_GET['stat'] == 3) {
+                    output_message("Logout success", "success");
                   }
               ?>
             </div>
