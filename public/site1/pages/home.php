@@ -52,11 +52,11 @@
 
                     <div class="list_carousel responsive">
                         <ul id="list_photos">
-                            <li><img src="images/bb.jpg" class="img-polaroid">  </li>
-                            <li><img src="images/dr.jpg" class="img-polaroid">  </li>
-                            <li><img src="images/lb.jpg" class="img-polaroid">  </li>
-                            <li><img src="images/nc.jpg" class="img-polaroid">  </li>
-							              <li><img src="images/jb.jpg" class="img-polaroid">  </li>
+                            <li><img src="images/b2.png" class="img-polaroid">  </li>
+                            <li><img src="images/c3.png" class="img-polaroid">  </li>
+                            <li><img src="images/d4.png" class="img-polaroid">  </li>
+                            <li><img src="images/e5.png" class="img-polaroid">  </li>
+							              <li><img src="images/f6.png" class="img-polaroid">  </li>
                             <!--li><img src="images/Top_view.jpg" class="img-polaroid">  </li>
                             <li><img src="images/vectorbeastcom-grass-sun.jpg" class="img-polaroid">  </li>
                             <li><img src="images/sunset-hair.jpg" class="img-polaroid">  </li>
